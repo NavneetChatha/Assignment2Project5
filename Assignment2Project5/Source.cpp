@@ -38,5 +38,13 @@ int main()
     }
 
     file.close();
+
+#ifdef _DEBUG
+    for (const STUDENT_DATA& student : students)
+    {
+        std::cout << student.firstName << " " << student.lastName << std::endl;
+    }
+#endif
+
     return 0;
 }
